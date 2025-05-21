@@ -1,0 +1,22 @@
+{
+  "name": "04_what-are-source-maps",
+  "version": "1.0.0",
+  "description": "Babel converts new Javascript code into old Javascript code so that old browsers can also execute JS.\r Bable converts JSX into React.createElement() - It's a function that returns a JavaScript object, NOT real HTML yet.\r React [ReactDOM.render()] takes the object returned by createElement() and turns it into real DOM nodes using Vanilla JS.",
+  "main": "React.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./script.js -d lib --source-maps --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/standalone": "^7.27.2",
+    "babel-cli": "^6.26.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-react": "^7.27.1"
+  }
+}
