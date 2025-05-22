@@ -1,0 +1,33 @@
+body{
+    background-color: antiquewhite;
+}
+
+.card{
+    max-width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card h3,p{
+    margin: 6px 0px;
+}
+
+.card{
+    border: 1px solid black;
+    box-shadow: 0,0 5px, 10px;
+}
+
+.card-content{
+    padding: 5px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
