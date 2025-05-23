@@ -1,7 +1,6 @@
 # React Fragments: Concept and Purpose
 
 - **React Fragments are used in React.**
-- They were briefly discussed before, but this video goes into them in more detail.
 - Fragments are used within your program or component.
 - Basically, a React Fragment is a wrapper.
 - It is used to wrap content.
@@ -51,15 +50,6 @@ There are two ways to use React Fragments:
 
 ## Summary
 
-React Fragments are a simple concept used in React to allow a component to return multiple elements without needing a single parent DOM node like a `<div>`. This solves the "JSX expressions must have one parent element" error. You can use the full `React.Fragment` syntax or the common short syntax `<>`. The key benefit is that Fragments do not add any extra elements to the rendered HTML DOM, resulting in a cleaner structure compared to using a wrapper `<div>`. Internally, a Fragment creates a wrapper object recognized by React DOM, which then renders the children directly.
+React Fragments are a simple concept used in React to allow a component to return multiple elements without needing a single parent DOM node like a `<div>`. This solves the "JSX expressions must have one parent element" error. You can use the full `React.Fragment` syntax or the common short syntax `<>`. The key benefit is that Fragments do not add any extra elements to the rendered HTML DOM, resulting in a cleaner structure compared to using a wrapper `<div>`. Internally, a Fragment creates a wrapper object recognized by React DOM, which then renders the children directly. 
 
 ---
-
-## Action Steps
-
-- You can download the starter code for the project from the description mentioned in the source.
-- After downloading, run `npm install` and then `npm start` to set up and run the project.
-- Experiment with removing the Fragment wrapper from a component that returns multiple elements to see the error.
-- Re-add the Fragment (either full syntax or short syntax) to fix the error and observe that the component works correctly.
-- If you have any doubts, you can ask questions in the comments section.
-- Alternatively, you can join the Telegram group (link in the description) and ask your questions there.
