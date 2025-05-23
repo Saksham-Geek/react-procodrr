@@ -1,0 +1,68 @@
+# State and Props in React
+
+The following details explain the key differences and similarities between **State** and **Props** in React, along with when to use each and how they function within components.
+
+---
+
+## State in React
+
+- **Definition & Scope:**
+  - State is the local variable of a component.
+  - State is defined and stays within that particular component.
+  
+- **Mutability:**
+  - State is mutable (changeable).
+  - You change/update state using a function, often referred to as `setState` or the specific setter function provided by the `useState` hook.
+
+- **Control:**
+  - A component controls its own state.
+
+- **Usage:**
+  - Use State for values that are changing frequently within a component.
+  - Use State for variables that are local to the component.
+
+---
+
+## Props in React
+
+- **Definition & Scope:**
+  - Props are like function arguments passed into a component.
+  - Props are passed from a parent component to a child component.
+
+- **Mutability:**
+  - Props are immutable (unchangeable).
+  - While you can technically change props (there are no boundaries or restrictions stopping you), it is a wrong practice and goes against the concepts of React and functional programming.
+  - If a value needs to be modified, you should use State instead of changing props.
+
+- **Control:**
+  - The parent component controls what values are passed as props to a child component. The parent decides the value that goes into the child.
+
+- **Usage:**
+  - Use Props when the parent component decides what value should be inside the child component.
+  - Use Props to pass values from a parent to a child component.
+
+---
+
+## Relationship and Similarities
+
+- A component can use both **State** and **Props** simultaneously.
+- **Props** are often the state of a parent component.
+- **Props** can also be simple hardcoded values passed from the parent, not necessarily state.
+- **Similarity:** When either **Props** change or **State** changes, the entire component re-renders. This is a key similarity between the two.
+
+---
+
+## Good Practices Highlighted
+
+- You should never modify props; it is considered a wrong practice in React and goes against its intended patterns.
+
+---
+
+## Summary
+
+In summary, **State** and **Props** are fundamental concepts in React for managing data within components. 
+
+- **State** represents data local to a component that it controls and can change (mutable). It's used for values that update frequently within the component itself.
+- **Props**, on the other hand, are data passed from a parent component to a child, acting like arguments. **Props** are considered immutable; although they can technically be changed, doing so is against React's principles. The parent controls the values of props.
+
+Both changes in **State** and **Props** cause the component to re-render. **Props** often originate from the parent's state but can also be simple values.
