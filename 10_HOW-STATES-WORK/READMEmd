@@ -1,0 +1,72 @@
+## State
+# React `useState` Hook Notes
+
+## Overview
+
+The `useState()` hook is a built-in React hook that allows function components to manage local state. When state is updated using this hook, the component re-renders with the updated state value.
+
+## How `useState` Works
+
+- `useState()` returns an **array** with two elements:
+  1. `stateVar` – the current state value.
+  2. `UpdaterFn` – a function to update the state value.
+
+```js
+const [stateVar, setStateVar] = useState(initialValue);
+On the first render, the stateVar is initialized with initialValue.
+
+On subsequent renders, it holds the updated state value.
+
+React performs a shallow comparison between old and new values:
+
+If the value has changed, the component re-renders.
+
+If not, it skips re-rendering.
+
+Under-the-Hood Concepts
+Closures: Each render has its own closure. When the UpdaterFn is called, it triggers a re-render with the most recent state value.
+
+Memoization: React internally optimizes re-renders by comparing previous and current state values, avoiding unnecessary updates.
+
+Example: Counter Component
+
+import { useState } from "react";
+
+function Counter() {
+    console.log("Counter Component is rendering when data in count (state variable) is updated and the first time the Component is loaded");
+
+    let [count, setCount] = useState(0);
+
+    return (
+        <>
+            <h1>{count}</h1>
+            <button onClick={() => setCount(count + 1)}>Increase</button>
+            <button onClick={() => setCount(count - 1)}>Decrease</button>
+        </>
+    );
+}
+
+export default Counter;
+Explanation
+useState(0) initializes count to 0.
+
+setCount(count + 1) and setCount(count - 1) update the state.
+
+After each update:
+
+React compares the new and old values.
+
+If the value has changed, the component re-renders.
+
+console.log runs every render to demonstrate this behavior.
+
+Note: Avoid using count++ or count-- directly, as they mutate the state variable instead of passing a new value. Use count + 1 and count - 1 instead to ensure correct state updates.
+
+Key Takeaways
+useState enables functional components to have local state.
+
+The updater function should be used with immutable values (e.g., count + 1).
+
+React optimizes rendering by comparing new and old state values.
+
+Hooks like useState rely on JavaScript concepts like closures and memoization.
